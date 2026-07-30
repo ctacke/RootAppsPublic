@@ -11,9 +11,10 @@ reservations, and coordinate what to bring.
 
 ## Getting Help
 
-For questions, bug reports, or feature requests, email:
+Support for QuestBoard is handled through our Root community. Join to ask
+questions, report bugs, and request features:
 
-**Chris Tacke** — [ctacke@gmail.com](mailto:ctacke@gmail.com)
+**[QuestBoard Support Community on Root →](https://rootapp.gg/ADBVq7gGhwqN0YN9hl_NtA)**
 
 To help us resolve issues quickly, please include:
 
