@@ -1,0 +1,17 @@
+title: Root Apps
+description: Privacy policies and support information for Root platform apps by Chris Tacke.
+theme: jekyll-theme-cayman
+
+# Project site served from https://ctacke.github.io/RootAppsPublic/
+url: "https://ctacke.github.io"
+baseurl: "/RootAppsPublic"
+
+# Give every page the theme's default layout without repeating it in front matter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
