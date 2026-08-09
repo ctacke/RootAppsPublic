@@ -5,6 +5,24 @@ permalink: /questboard/changelog/
 
 What's new in **QuestBoard**, newest first.
 
+## 0.9.6 — 9 August 2026
+
+A stability release.
+
+### Fixed
+
+- **A crash that could stop QuestBoard from starting.** Once more than one
+  person had voted on the same date — on an event request or an event proposal —
+  the app could fail to start, and would keep failing on every restart until it
+  was repaired by hand. Fixed, and the app now recovers from that state on its
+  own. Communities affected by this need only restart the app; no votes,
+  proposals or reservations were lost.
+
+### Added
+
+- The version you're running is now shown in the top-right of the title banner,
+  which makes it much easier to say what you're on when reporting a problem.
+
 ## 0.9.5 — 9 August 2026
 
 ### Event Proposals
