@@ -14,6 +14,7 @@ A gaming event management app for Root communities — organize tabletop events,
 - [Privacy Policy]({{ '/questboard/privacy/' | relative_url }})
 - [Terms of Service]({{ '/questboard/terms/' | relative_url }})
 - [Support]({{ '/questboard/support/' | relative_url }})
+- [Changelog]({{ '/questboard/changelog/' | relative_url }})
 
 ## Contact
 
