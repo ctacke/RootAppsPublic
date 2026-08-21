@@ -7,7 +7,7 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Pirata+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Pirata+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=VT323&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -18,12 +18,18 @@
     <p class="brand-tagline">Privacy, Terms &amp; Support</p>
   </header>
 
+  {% if page.home %}
+  <main class="wrap wrap--home">
+    {{ content }}
+  </main>
+  {% else %}
   <main class="wrap">
     <article class="parchment">
       {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
       {{ content }}
     </article>
   </main>
+  {% endif %}
 
   <footer class="site-footer">
     <p>&copy; {{ 'now' | date: "%Y" }} Chris Tacke &middot; <a href="{{ '/' | relative_url }}">Root Apps</a></p>

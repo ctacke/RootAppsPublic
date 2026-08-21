@@ -1,31 +1,62 @@
 ---
 title: Root Apps
 permalink: /
+home: true
 ---
 
-Privacy policies and support information for my [Root](https://www.root.io/) platform apps.
+<p class="home-intro">Privacy policies and support information for my
+<a href="https://www.root.io/">Root</a> platform apps.</p>
 
-## Apps
+<p class="section-label">Apps</p>
 
-### QuestBoard
+<div class="app-grid">
 
-A gaming event management app for Root communities — organize tabletop events, manage tables and reservations, and coordinate what to bring.
+  <section class="app-card app-card--questboard">
+    <h2 class="app-name">QuestBoard</h2>
+    <p class="app-tagline">Gaming event management</p>
+    <p class="app-blurb">Organize tabletop events for your community &mdash; manage
+    tables and game types, take reservations, and coordinate what everyone
+    brings.</p>
+    <ul class="app-links">
+      <li><a href="{{ '/questboard/privacy/' | relative_url }}">Privacy Policy</a></li>
+      <li><a href="{{ '/questboard/terms/' | relative_url }}">Terms of Service</a></li>
+      <li><a href="{{ '/questboard/support/' | relative_url }}">Support</a></li>
+      <li><a href="{{ '/questboard/changelog/' | relative_url }}">Changelog</a></li>
+    </ul>
+  </section>
 
-- [Privacy Policy]({{ '/questboard/privacy/' | relative_url }})
-- [Terms of Service]({{ '/questboard/terms/' | relative_url }})
-- [Support]({{ '/questboard/support/' | relative_url }})
-- [Changelog]({{ '/questboard/changelog/' | relative_url }})
+  <section class="app-card app-card--gowest">
+    <h2 class="app-name">GoWest</h2>
+    <p class="app-tagline">Trail survival</p>
+    <p class="app-blurb">Lead a party of four and two oxen west along one of four
+    historic trails. Ration the water, keep the wagon rolling, and hope the
+    river crossing goes better than the last one.</p>
+    <ul class="app-links">
+      <li><a href="{{ '/gowest/privacy/' | relative_url }}">Privacy Policy</a></li>
+      <li><a href="{{ '/gowest/terms/' | relative_url }}">Terms of Service</a></li>
+      <li><a href="{{ '/gowest/support/' | relative_url }}">Support</a></li>
+    </ul>
+  </section>
 
-### Zork Trilogy
+  <section class="app-card app-card--zork">
+    <h2 class="app-name">Zork Trilogy</h2>
+    <p class="app-tagline">Interactive fiction</p>
+    <p class="app-blurb">The classic Infocom text adventures &mdash; <em>Zork I: The
+    Great Underground Empire</em>, <em>Zork II: The Wizard of Frobozz</em> and
+    <em>Zork III: The Dungeon Master</em> &mdash; played on an authentic
+    green-screen CRT console.</p>
+    <ul class="app-links">
+      <li><a href="{{ '/zork/privacy/' | relative_url }}">Privacy Policy</a></li>
+      <li><a href="{{ '/zork/terms/' | relative_url }}">Terms of Service</a></li>
+      <li><a href="{{ '/zork/support/' | relative_url }}">Support &amp; Guide</a></li>
+      <li><a href="{{ '/zork/changelog/' | relative_url }}">Changelog</a></li>
+    </ul>
+  </section>
 
-The classic Infocom text adventure game trilogy (*Zork I: The Great Underground Empire*, *Zork II: The Wizard of Frobozz*, and *Zork III: The Dungeon Master*) in an authentic retro green-screen CRT console.
+</div>
 
-- [Privacy Policy]({{ '/zork/privacy/' | relative_url }})
-- [Terms of Service]({{ '/zork/terms/' | relative_url }})
-- [Support & Guide]({{ '/zork/support/' | relative_url }})
-- [Changelog]({{ '/zork/changelog/' | relative_url }})
-
-## Contact
-
-Questions about any of these apps or how your data is handled? Email
-[ctacke@gmail.com](mailto:ctacke@gmail.com).
+<div class="home-contact">
+  <h2>Contact</h2>
+  <p>Questions about any of these apps or how your data is handled? Email
+  <a href="mailto:ctacke@gmail.com">ctacke@gmail.com</a>.</p>
+</div>

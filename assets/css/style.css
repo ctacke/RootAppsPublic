@@ -151,3 +151,225 @@ a:hover { color: #A0522D; text-decoration: underline; }
   .parchment { padding: 28px 22px; border-radius: 10px; }
   .wrap { padding: 24px 14px; }
 }
+
+/* =========================================================
+   Home page — one themed card per app.
+   The shell (header/footer) stays neutral; each .app-card
+   carries the look of the app it represents.
+   ========================================================= */
+
+.wrap--home { max-width: 900px; padding-top: 34px; }
+
+.home-intro {
+  max-width: 640px;
+  margin: 0 auto 34px;
+  text-align: center;
+  color: #c9b795;
+}
+.home-intro a { color: var(--gold-2); text-decoration: underline; text-decoration-color: rgba(237,197,142,.35); }
+.home-intro a:hover { color: #fff2d8; }
+
+.section-label {
+  margin: 0 0 20px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #9c8663;
+}
+
+.app-grid { display: grid; gap: 28px; }
+
+.app-card {
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 30px 34px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+.app-card > :first-child { margin-top: 0; }
+.app-card .app-name { margin: 0 0 6px; line-height: 1.15; }
+.app-card .app-tagline {
+  margin: 0 0 16px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.app-card .app-blurb { margin: 0 0 20px; }
+
+.app-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.app-links li { margin: 0; }
+.app-links a {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+/* ---- QuestBoard: parchment, Cinzel, saddle-brown ---- */
+.app-card--questboard {
+  background: linear-gradient(135deg, var(--parchment-1) 0%, var(--parchment-2) 100%);
+  border-color: var(--brown);
+  color: var(--ink);
+  box-shadow: 0 14px 36px rgba(0,0,0,.45), inset 0 0 60px rgba(139,115,85,.12);
+}
+.app-card--questboard .app-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 34px);
+  color: #5D2F1A;
+}
+.app-card--questboard .app-tagline { color: var(--brown-dark); font-family: 'Cinzel', serif; }
+.app-card--questboard .app-blurb { font-family: 'EB Garamond', Georgia, serif; }
+.app-card--questboard .app-links a {
+  font-family: 'Cinzel', serif;
+  background: rgba(139, 69, 19, 0.10);
+  border-color: rgba(139, 69, 19, 0.45);
+  color: var(--saddle-dark);
+}
+.app-card--questboard .app-links a:hover {
+  background: var(--saddle);
+  border-color: var(--saddle-dark);
+  color: #F5EFDF;
+}
+
+/* ---- GoWest: dark terminal, VT323 / Press Start 2P, amber + console green ---- */
+.app-card--gowest {
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,.018) 0 1px, transparent 1px 3px),
+    linear-gradient(160deg, #1d1712 0%, #120e0b 60%, #0c0a08 100%);
+  border-color: #524031;
+  color: #e0d6c8;
+  box-shadow: 0 14px 36px rgba(0,0,0,.55), inset 0 0 40px rgba(212,163,89,.06);
+}
+.app-card--gowest .app-name {
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  font-size: clamp(15px, 2.6vw, 20px);
+  letter-spacing: 1px;
+  color: #d4a359;
+  text-shadow: 0 0 12px rgba(212,163,89,.35);
+}
+.app-card--gowest .app-tagline {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #9fb87a;
+}
+.app-card--gowest .app-blurb {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-size: 21px;
+  line-height: 1.5;
+  color: #c4b6a6;
+}
+.app-card--gowest .app-links a {
+  font-family: 'VT323', 'Courier New', monospace;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background: #2b2118;
+  border-color: #524031;
+  color: #33ff66;
+}
+.app-card--gowest .app-links a::before { content: "> "; opacity: .65; }
+.app-card--gowest .app-links a:hover {
+  background: #3d3023;
+  border-color: #d4a359;
+  color: #7dffa4;
+}
+
+/* ---- Zork: CRT terminal. Values mirror root-zork/src/client/src/App.css ---- */
+.app-card--zork {
+  position: relative;
+  overflow: hidden;
+  background: #050e05;                 /* --crt-screen-bg */
+  border-color: #226f22;               /* --border-green */
+  color: #33ff33;                      /* --phosphor-green */
+  box-shadow: inset 0 0 6px rgba(0,0,0,.4), 0 14px 36px rgba(0,0,0,.6), 0 0 10px rgba(25,75,25,.3);
+}
+/* scanlines + vignette, decorative only */
+.app-card--zork::after,
+.app-card--zork::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.app-card--zork::after {
+  z-index: 2;
+  opacity: .92;
+  background:
+    linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,.42) 50%),
+    linear-gradient(90deg, rgba(255,0,0,.04), rgba(0,255,0,.02), rgba(0,0,255,.04));
+  background-size: 100% 4px, 6px 100%;
+}
+.app-card--zork::before {
+  z-index: 1;
+  background: radial-gradient(circle at center, transparent 65%, rgba(0,0,0,.6) 100%);
+}
+.app-card--zork > * { position: relative; z-index: 3; }
+
+.app-card--zork .app-name {
+  font-family: 'VT323', 'Share Tech Mono', 'Courier New', monospace;   /* --terminal-font */
+  font-weight: 400;
+  font-size: clamp(30px, 4.6vw, 42px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #72ff72;                      /* --phosphor-bright */
+  text-shadow: 0 0 6px rgba(114,255,114,.85), 0 0 14px rgba(51,255,51,.5);
+}
+.app-card--zork .app-tagline {
+  font-family: 'Share Tech Mono', ui-monospace, monospace;             /* --mono-code-font */
+  font-size: 12px;
+  color: #ffb000;                      /* --phosphor-amber */
+}
+.app-card--zork .app-blurb {
+  font-family: 'VT323', 'Share Tech Mono', monospace;
+  font-size: 21px;
+  line-height: 1.5;
+  color: #33ff33;
+  text-shadow: 0 0 4px rgba(51,255,51,.65), 0 0 10px rgba(51,255,51,.25);  /* --phosphor-glow */
+}
+.app-card--zork .app-blurb em { color: #72ff72; font-style: italic; }
+.app-card--zork .app-links a {
+  font-family: 'Share Tech Mono', ui-monospace, monospace;
+  font-size: 14px;
+  background: #030803;                 /* --crt-bg */
+  border-color: #226f22;
+  color: #33ff33;
+}
+.app-card--zork .app-links a:hover {
+  border-color: #33ff33;               /* --border-green-bright */
+  color: #72ff72;
+  text-shadow: 0 0 6px rgba(114,255,114,.85), 0 0 14px rgba(51,255,51,.5);
+}
+
+/* ---- Contact ---- */
+.home-contact {
+  margin: 34px auto 0;
+  max-width: 640px;
+  text-align: center;
+  color: #b0a496;
+}
+.home-contact h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #9c8663;
+  margin: 0 0 8px;
+}
+.home-contact a { color: var(--gold-2); text-decoration: underline; text-decoration-color: rgba(237,197,142,.35); }
+.home-contact a:hover { color: #fff2d8; }
+
+@media (max-width: 560px) {
+  .app-card { padding: 24px 20px; }
+  .app-links a { font-size: 14px; padding: 6px 12px; }
+  .app-card--gowest .app-links a { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-links a { transition: none; }
+}
