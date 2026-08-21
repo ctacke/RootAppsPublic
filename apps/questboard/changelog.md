@@ -1,6 +1,7 @@
 ---
 title: QuestBoard Changelog
 permalink: /questboard/changelog/
+app: questboard
 ---
 
 What's new in **QuestBoard**, newest first.

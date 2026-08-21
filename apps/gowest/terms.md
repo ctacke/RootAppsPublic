@@ -1,6 +1,7 @@
 ---
 title: GoWest Terms of Service
 permalink: /gowest/terms/
+app: gowest
 ---
 
 **Last updated: August 21, 2026**

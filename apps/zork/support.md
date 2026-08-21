@@ -1,6 +1,7 @@
 ---
 title: Zork Trilogy Support & Guide
 permalink: /zork/support/
+app: zork
 ---
 
 Welcome to the **Zork Trilogy** support page and adventurer reference guide.

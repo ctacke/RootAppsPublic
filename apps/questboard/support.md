@@ -1,6 +1,7 @@
 ---
 title: QuestBoard Support
 permalink: /questboard/support/
+app: questboard
 ---
 
 Need help with **QuestBoard**? You're in the right place.

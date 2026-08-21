@@ -1,6 +1,7 @@
 ---
 title: GoWest Support
 permalink: /gowest/support/
+app: gowest
 ---
 
 Need help with **GoWest**? You're in the right place.

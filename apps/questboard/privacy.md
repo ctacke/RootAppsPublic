@@ -1,6 +1,7 @@
 ---
 title: QuestBoard Privacy Policy
 permalink: /questboard/privacy/
+app: questboard
 ---
 
 **Last updated: July 30, 2026**

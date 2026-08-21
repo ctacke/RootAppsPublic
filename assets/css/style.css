@@ -373,3 +373,119 @@ a:hover { color: #A0522D; text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   .app-links a { transition: none; }
 }
+
+/* =========================================================
+   Per-app page themes.
+   `.parchment` stays the QuestBoard look and supplies the shared
+   box model; these modifiers repaint it for the other apps.
+   Driven by `app:` in each page's front matter.
+   ========================================================= */
+
+/* ---- GoWest pages: dark terminal, amber + console green ---- */
+.parchment--gowest {
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,.015) 0 1px, transparent 1px 3px),
+    linear-gradient(160deg, #1d1712 0%, #120e0b 55%, #0c0a08 100%);
+  border-color: #524031;
+  color: #d8cba6;
+  font-family: 'VT323', 'Courier New', monospace;
+  font-size: 22px;
+  line-height: 1.6;
+  box-shadow: 0 14px 40px rgba(0,0,0,.55), inset 0 0 60px rgba(212,163,89,.05);
+}
+.parchment--gowest .page-title {
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  font-size: clamp(14px, 3vw, 21px);
+  line-height: 1.5;
+  color: #d4a359;
+  text-shadow: 0 0 12px rgba(212,163,89,.35);
+}
+.parchment--gowest h1,
+.parchment--gowest h2,
+.parchment--gowest h3 { font-family: 'VT323', 'Courier New', monospace; }
+.parchment--gowest h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d4a359;
+  border-bottom: 1px solid #524031;
+}
+.parchment--gowest h3 { font-size: 24px; color: #9fb87a; }
+.parchment--gowest p,
+.parchment--gowest li { color: #c4b6a6; }
+.parchment--gowest strong { color: #f0e6da; }
+.parchment--gowest a { color: #33ff66; text-decoration-color: rgba(51,255,102,.4); }
+.parchment--gowest a:hover { color: #7dffa4; }
+.parchment--gowest li::marker { color: #d4a359; }
+.parchment--gowest hr { border-top-color: #524031; }
+.parchment--gowest blockquote {
+  border-left-color: #d4a359;
+  background: rgba(212,163,89,.08);
+}
+.parchment--gowest code {
+  background: #2b2118;
+  color: #9fb87a;
+  font-size: 0.85em;
+}
+
+/* ---- Zork pages: CRT terminal, phosphor green + amber ---- */
+.parchment--zork {
+  position: relative;
+  overflow: hidden;
+  background: #050e05;
+  border-color: #226f22;
+  color: #33ff33;
+  font-family: 'VT323', 'Share Tech Mono', 'Courier New', monospace;
+  font-size: 22px;
+  line-height: 1.6;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.4), 0 14px 40px rgba(0,0,0,.6), 0 0 10px rgba(25,75,25,.3);
+}
+.parchment--zork::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .92;
+  background:
+    linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,.42) 50%),
+    linear-gradient(90deg, rgba(255,0,0,.04), rgba(0,255,0,.02), rgba(0,0,255,.04));
+  background-size: 100% 4px, 6px 100%;
+}
+.parchment--zork > * { position: relative; z-index: 1; }
+.parchment--zork .page-title {
+  font-family: 'VT323', 'Share Tech Mono', monospace;
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #72ff72;
+  text-shadow: 0 0 6px rgba(114,255,114,.85), 0 0 14px rgba(51,255,51,.5);
+}
+.parchment--zork h1,
+.parchment--zork h2,
+.parchment--zork h3 { font-family: 'VT323', 'Share Tech Mono', monospace; }
+.parchment--zork h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffb000;
+  border-bottom: 1px solid #226f22;
+}
+.parchment--zork h3 { font-size: 24px; color: #72ff72; }
+.parchment--zork p,
+.parchment--zork li { color: #33ff33; }
+.parchment--zork em { color: #8aff8a; }
+.parchment--zork strong { color: #72ff72; }
+.parchment--zork a { color: #72ff72; text-decoration-color: rgba(114,255,114,.45); }
+.parchment--zork a:hover { color: #b6ffc7; text-shadow: 0 0 8px rgba(114,255,114,.6); }
+.parchment--zork li::marker { color: #ffb000; }
+.parchment--zork hr { border-top-color: #226f22; }
+.parchment--zork blockquote {
+  border-left-color: #ffb000;
+  background: rgba(51,255,51,.06);
+}
+.parchment--zork code {
+  background: #030803;
+  color: #ffb000;
+  font-family: 'Share Tech Mono', ui-monospace, monospace;
+  font-size: 0.8em;
+}

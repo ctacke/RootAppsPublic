@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Pirata+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=VT323&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +24,7 @@
   </main>
   {% else %}
   <main class="wrap">
-    <article class="parchment">
+    <article class="parchment{% if page.app %} parchment--{{ page.app }}{% endif %}">
       {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
       {{ content }}
     </article>

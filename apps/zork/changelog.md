@@ -1,6 +1,7 @@
 ---
 title: Zork Trilogy Changelog
 permalink: /zork/changelog/
+app: zork
 ---
 
 Release notes and updates for the **Zork Trilogy** Root platform application.

@@ -1,6 +1,7 @@
 ---
 title: QuestBoard Terms of Service
 permalink: /questboard/terms/
+app: questboard
 ---
 
 **Last updated: July 30, 2026**

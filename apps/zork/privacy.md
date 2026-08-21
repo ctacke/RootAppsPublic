@@ -1,6 +1,7 @@
 ---
 title: Zork Trilogy Privacy Policy
 permalink: /zork/privacy/
+app: zork
 ---
 
 **Last updated: August 21, 2026**

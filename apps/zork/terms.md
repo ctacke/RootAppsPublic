@@ -1,6 +1,7 @@
 ---
 title: Zork Trilogy Terms of Service
 permalink: /zork/terms/
+app: zork
 ---
 
 **Last updated: August 14, 2026**

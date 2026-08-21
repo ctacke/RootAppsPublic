@@ -1,6 +1,7 @@
 ---
 title: GoWest Privacy Policy
 permalink: /gowest/privacy/
+app: gowest
 ---
 
 **Last updated: August 21, 2026**
