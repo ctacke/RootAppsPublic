@@ -346,52 +346,51 @@ a:hover { color: #A0522D; text-decoration: underline; }
   text-shadow: 0 0 6px rgba(114,255,114,.85), 0 0 14px rgba(51,255,51,.5);
 }
 
-/* ---- Node-ROOT: technical automation layout, charcoal + node red ---- */
+/* ---- Node-ROOT: light Node-RED editor. Values mirror
+   root-apps/Node-ROOT/src/client/src/App.css ---- */
 .app-card--noderoot {
   background:
-    linear-gradient(rgba(240, 240, 240, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(240, 240, 240, 0.04) 1px, transparent 1px),
-    linear-gradient(135deg, #1e1e1e 0%, #111111 100%);
-  background-size: 15px 15px, 15px 15px, 100% 100%;
-  border-color: #333333;
-  color: #dddddd;
-  box-shadow: 0 14px 36px rgba(0,0,0,.55), inset 0 0 20px rgba(0,0,0,.8);
+    radial-gradient(circle, #cecece 1px, transparent 1px) 0 0 / 15px 15px,
+    #f3f3f3;                            /* --bg-workspace + canvas dot grid */
+  border-color: #bbbbbb;                /* --border-color */
+  border-radius: 5px;
+  color: #222222;                       /* --text-color */
+  box-shadow: 0 14px 36px rgba(0,0,0,.45), inset 0 1px 0 #ffffff;
 }
 .app-card--noderoot .app-name {
-  font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
-  font-weight: 700;
-  font-size: clamp(20px, 3vw, 24px);
-  color: #ff453a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 28px);
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 10px rgba(255, 69, 58, 0.2);
+  color: #ad2828;                       /* .brand strong */
 }
 .app-card--noderoot .app-tagline {
-  font-family: 'Outfit', 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  color: #ffd60a;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b56300;                       /* --accent-color, darkened for contrast */
 }
 .app-card--noderoot .app-blurb {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #bbbbbb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #444444;
 }
 .app-card--noderoot .app-links a {
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 13px;
-  font-weight: 600;
-  background: #2c2c2e;
-  border-color: #48484a;
-  color: #30d158;
+  font-weight: 500;
+  background: #ffffff;                  /* button */
+  border-color: #bbbbbb;
   border-radius: 4px;
+  color: #1a4d8f;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
 }
 .app-card--noderoot .app-links a:hover {
-  background: #3a3a3c;
-  border-color: #30d158;
-  color: #34c759;
+  background: #eaeaea;                  /* --btn-hover */
+  border-color: #888888;
+  color: #ad2828;
 }
 
 /* ---- Contact ---- */
@@ -536,4 +535,62 @@ a:hover { color: #A0522D; text-decoration: underline; }
   color: #ffb000;
   font-family: 'Share Tech Mono', ui-monospace, monospace;
   font-size: 0.8em;
+}
+
+/* ---- Node-ROOT pages: light Node-RED editor panel.
+   Values mirror root-apps/Node-ROOT/src/client/src/App.css ---- */
+.parchment--noderoot {
+  background:
+    radial-gradient(circle, #cecece 1px, transparent 1px) 0 0 / 15px 15px,
+    #f3f3f3;                            /* --bg-workspace + canvas dot grid */
+  border: 1px solid #bbbbbb;            /* --border-color */
+  border-radius: 5px;
+  color: #222222;                       /* --text-color */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  box-shadow: 0 14px 40px rgba(0,0,0,.45), inset 0 1px 0 #ffffff;
+}
+.parchment--noderoot .page-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 4.4vw, 36px);
+  letter-spacing: -0.02em;
+  color: #ad2828;                       /* .brand strong */
+  text-shadow: none;
+}
+.parchment--noderoot h1,
+.parchment--noderoot h2,
+.parchment--noderoot h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #222222;
+}
+.parchment--noderoot h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #bbbbbb;
+}
+.parchment--noderoot h3 { font-size: 16px; font-weight: 700; color: #444444; }
+.parchment--noderoot p,
+.parchment--noderoot li { color: #333333; }
+.parchment--noderoot strong { color: #111111; }
+.parchment--noderoot a { color: #1a4d8f; text-decoration-color: rgba(26,77,143,.4); }
+.parchment--noderoot a:hover { color: #ad2828; }
+.parchment--noderoot li::marker { color: #ff9000; }   /* --accent-color */
+.parchment--noderoot hr { border-top: 1px solid #bbbbbb; }
+.parchment--noderoot blockquote {
+  border-left: 3px solid #ff9000;
+  background: rgba(255, 144, 0, 0.08);
+  font-style: normal;
+  color: #444444;
+}
+.parchment--noderoot code {
+  font-family: Consolas, "Courier New", monospace;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  color: #1a4d8f;                       /* .debug-value */
+  font-size: 0.85em;
 }
