@@ -53,6 +53,19 @@ home: true
     </ul>
   </section>
 
+  <section class="app-card app-card--noderoot">
+    <h2 class="app-name">Node-ROOT</h2>
+    <p class="app-tagline">Visual workflow automation</p>
+    <p class="app-blurb">Automate your community tasks &mdash; drag event triggers,
+    conditions, and action nodes onto a visual canvas, wire them together, and deploy
+    automated rules in real time.</p>
+    <ul class="app-links">
+      <li><a href="{{ '/noderoot/privacy/' | relative_url }}">Privacy Policy</a></li>
+      <li><a href="{{ '/noderoot/terms/' | relative_url }}">Terms of Service</a></li>
+      <li><a href="{{ '/noderoot/support/' | relative_url }}">Support</a></li>
+    </ul>
+  </section>
+
 </div>
 
 <div class="home-contact">
