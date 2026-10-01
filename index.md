@@ -63,6 +63,7 @@ home: true
       <li><a href="{{ '/noderoot/privacy/' | relative_url }}">Privacy Policy</a></li>
       <li><a href="{{ '/noderoot/terms/' | relative_url }}">Terms of Service</a></li>
       <li><a href="{{ '/noderoot/support/' | relative_url }}">Support</a></li>
+      <li><a href="{{ '/noderoot/changelog/' | relative_url }}">Changelog</a></li>
     </ul>
   </section>
 
