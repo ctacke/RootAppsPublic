@@ -36,7 +36,8 @@ We provide ready-to-run sample bots for both Python and TypeScript:
 ### 1. Python Moderation Bot (Ready to Deploy)
 A lightweight Python bot that inspects incoming chat messages, flags prohibited words (e.g., `spam`, `crypto scam`), adds a `warning` reaction, replies with a moderation warning, and can optionally delete offending messages.
 
-- **Download**: [noderoot-python-bot.zip]({{ '/assets/downloads/noderoot-python-bot.zip' | relative_url }})
+- **Download Package**: [noderoot-python-bot.zip]({{ '/assets/downloads/noderoot-python-bot.zip' | relative_url }})
+- **Python SDK Source**: [sdks/python/](https://github.com/ctacke/RootAppsPublic/tree/main/sdks/python)
 - **Features**:
   - Zero external dependencies beyond the standard library (uses built-in `http.server`, `hmac`, and `hashlib`).
   - Turnkey deployment on [bot-hosting.net](https://bot-hosting.net/) or any host that supports Python.
@@ -45,9 +46,11 @@ A lightweight Python bot that inspects incoming chat messages, flags prohibited 
 ### 2. TypeScript / Node.js Bot
 Built using the official `@noderoot/bot-sdk` package.
 
-```bash
-npm install @noderoot/bot-sdk
-```
+- **TypeScript SDK Source**: [sdks/typescript/](https://github.com/ctacke/RootAppsPublic/tree/main/sdks/typescript)
+- **Install**:
+  ```bash
+  npm install @noderoot/bot-sdk
+  ```
 
 ---
 

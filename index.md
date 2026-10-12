@@ -65,6 +65,7 @@ home: true
       <li><a href="{{ '/noderoot/support/' | relative_url }}">Support</a></li>
       <li><a href="{{ '/noderoot/changelog/' | relative_url }}">Changelog</a></li>
       <li><a href="{{ '/noderoot/bots/' | relative_url }}">Self-Hosted Bots Guide</a></li>
+      <li><a href="https://github.com/ctacke/RootAppsPublic/tree/main/sdks">Bot SDKs (TS &amp; Python)</a></li>
     </ul>
   </section>
 

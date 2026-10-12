@@ -1,0 +1,29 @@
+{
+  "name": "@noderoot/bot-sdk",
+  "version": "0.1.0",
+  "description": "SDK for writing self-hosted Node-ROOT bots over webhooks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "root",
+    "noderoot",
+    "bot",
+    "sdk",
+    "webhooks"
+  ],
+  "author": "Chris Tacke",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
