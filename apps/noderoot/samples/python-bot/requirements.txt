@@ -1,0 +1,2 @@
+# Node-ROOT Python bot uses only standard library modules (http.server, hmac, hashlib, json, time).
+# No external pip packages required.

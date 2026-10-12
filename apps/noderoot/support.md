@@ -35,6 +35,14 @@ Use double curly-brace template expressions (e.g., `{{message.content}}` or `{{m
 **Why does my action fail with "Permission denied"?**
 Workflows run under the security scope of the Node-ROOT app's manifest. If you use a "Send Message" action but the app manifest does not request message scopes (or has not been authorized in the destination channel), the action will fail. Check the warnings highlighted in red in your execution debug history.
 
+**How do I connect external bots (Python, Node.js, etc.)?**
+You can connect self-hosted bots to Node-ROOT via secure webhooks. If the bot contains your business or moderation logic, simply register it under the **Bots** button in the editor toolbar—**no canvas workflow is needed**. See the [Self-Hosted Bots Guide]({{ '/noderoot/bots/' | relative_url }}) for full instructions, sample bots, and configuration steps.
+
+## Guides & Documentation
+
+- [Self-Hosted Bots & Webhook Guide]({{ '/noderoot/bots/' | relative_url }})
+- [Node-ROOT Changelog]({{ '/noderoot/changelog/' | relative_url }})
+
 ## Legal
 
 - [Privacy Policy]({{ '/noderoot/privacy/' | relative_url }})

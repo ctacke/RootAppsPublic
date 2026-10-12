@@ -64,6 +64,7 @@ home: true
       <li><a href="{{ '/noderoot/terms/' | relative_url }}">Terms of Service</a></li>
       <li><a href="{{ '/noderoot/support/' | relative_url }}">Support</a></li>
       <li><a href="{{ '/noderoot/changelog/' | relative_url }}">Changelog</a></li>
+      <li><a href="{{ '/noderoot/bots/' | relative_url }}">Self-Hosted Bots Guide</a></li>
     </ul>
   </section>
 
