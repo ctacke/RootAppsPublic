@@ -10,6 +10,18 @@ Whether you run a bot on a free hosting platform like [bot-hosting.net](https://
 
 ---
 
+## 🎥 Demonstration Video
+
+Watch a walkthrough of building, installing, and testing a self-hosted bot with Node-ROOT:
+
+<div style="position: relative; width: 100%; max-width: 800px; margin: 1rem 0; padding-bottom: 45%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/vbWrmTFftyo" title="Node-ROOT Self-Hosted Bots Demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+Prefer to watch on YouTube? [Open the video directly](https://youtu.be/vbWrmTFftyo).
+
+---
+
 ## ⚠️ Crucial Concept: Direct Bot vs. Canvas Workflow
 
 Before building or installing a bot, understand the difference between the two ways Node-ROOT can interact with your bot:
