@@ -6,6 +6,59 @@ app: noderoot
 
 What's new in **Node-ROOT**, newest first.
 
+## 1.2.0 — 4 November 2026
+
+### Ephemeral channels
+
+- **New "Ephemeral" action node**: Deletes messages in a channel older than an age you choose (minutes, hours, days or weeks), so a channel clears itself out. Includes a **Preserve pinned** option to keep pinned messages, and a **Max deletions per run** safety cap (0 = unlimited).
+
+### New "Timer" trigger
+
+- **Run workflows on a schedule**: A new Timer trigger fires on a fixed interval (seconds, minutes, hours or days), independent of any chat event. Timing is a reusable building block — wire it to anything that should happen periodically, like an ephemeral-channel sweep.
+
+### List Messages
+
+- **New "List Messages" data node**: Fetches recent messages from a channel (newest first) for workflows that need to look at channel history.
+
+### Ready-made sample
+
+- **"Ephemeral channel (6h)" workflow**: An importable sample wiring a 15-minute Timer into the Ephemeral node to keep a channel clear of messages older than six hours. Pick your channel and deploy.
+
+### Clearer error reporting
+
+- **Real failure details**: When a workflow action fails, the logs now show the underlying reason (including the service error code) instead of an opaque "root-error". The Ephemeral node also says whether listing or deleting messages failed, and one message it cannot delete no longer aborts the whole sweep.
+
+## 1.1.4 — 14 October 2026
+
+### Flow editor fix
+
+- **Node dragging**: Fixed node movement so dragging from mouse-down behaves correctly on the canvas.
+
+## 1.1.3 — 14 October 2026
+
+### Action execution settling delay
+
+When workflows execute fast actions in response to real-time events, the action could occasionally reach the backend before the client finished rendering the triggering event (for example, a message deletion action firing before the inbound message appeared in the channel).
+
+- **Backend settling delay**: Action nodes now include a brief 250ms delay before execution (`actionStartDelayMs`), giving the client UI and backend state time to settle.
+- **Configurable**: Configurable via execution options, and automatically disabled in test runs so simulation performance remains instant.
+
+## 1.1.2 — 12 October 2026
+
+### "Call Bot" node improvements
+
+- **Integrated Bot Picker**: The `Call Bot` action node now features a native dropdown picker to select any registered bot directly by name, complete with an inline refresh button in the properties panel.
+- **Automatic Secret & Endpoint Resolution**: When a registered bot is selected, Node-ROOT automatically resolves its webhook URL, HMAC signing secret, and configured timeout from the bot store—no manual copying and pasting of secrets or URLs into node properties required.
+- **Custom Overrides**: Optional override fields remain available if you need to provide a custom URL, HMAC secret, or timeout override for a specific execution.
+- **Automatic Environment Sync**: The editor now keeps registered bots in sync with channels and roles, and automatically refreshes the bot list when closing the Bots modal.
+
+## 1.1.1 — 12 October 2026
+
+### Unsecured HTTP bot endpoints
+
+- **Remote HTTP support**: The "Allow Insecure" toggle now permits plain HTTP connections to any bot endpoint, not just `localhost` and private IP addresses. This makes it easier to connect bots hosted on test servers or third-party hosting platforms that do not terminate TLS/HTTPS.
+- **Python bot logging fix**: Improved log formatting resilience in the sample Python bot server to prevent formatting errors on incoming connections.
+
 ## 1.1.0 — 12 October 2026
 
 ### Self-Hosted Bots & Webhook Bridge
