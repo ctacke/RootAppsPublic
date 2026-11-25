@@ -6,6 +6,25 @@ app: noderoot
 
 What's new in **Node-ROOT**, newest first.
 
+## 1.3.1 — 25 November 2026
+
+### Errors panel
+
+- **See what is failing**: Admins can open a new Errors panel showing what has failed in live workflows, with a readable reason, how often it happened, and a shortcut to the failing node. It includes failures that were allowed to continue and deployed workflows that could not run. The toolbar button shows how many errors there are.
+
+### Safer deploys
+
+- **Deploy stops when a workflow has errors** and selects the node to fix, rather than replacing the live version with one that cannot run.
+- **Missing channels are caught**: An action set to use the triggering channel is flagged when its trigger has none, such as Timer or User Joined.
+- **Missing recipients are caught**: A Send Notification set to a role or user is flagged until one is chosen.
+
+### Fixes
+
+- **Long notification titles no longer fail the workflow**: Root rejects titles over 50 characters, which a long member name could trigger. Such titles are now shortened, and the full text becomes the description when the description is empty. Applies to Send Notification and to bot notifications.
+- **Samples no longer fail out of the box**: "Welcome new members", "Notify on help requests" and "Ephemeral channel (6h)" now arrive as drafts until you choose a channel or role. Copies that were never set up are returned to draft: choose a channel or role and deploy to use them.
+- **Welcome greeting**: The "Welcome new members" sample now greets members by name. If you already deployed it with the original greeting, deploy it again to pick up the fix.
+- A workflow's last error is no longer sent to members who are not admins.
+
 ## 1.3.0 — 25 November 2026
 
 ### Image moderation
