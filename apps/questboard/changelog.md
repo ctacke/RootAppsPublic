@@ -6,6 +6,12 @@ app: questboard
 
 What's new in **QuestBoard**, newest first.
 
+## 0.9.8 — 25 November 2026
+
+### Changed
+
+- Updated to Root SDK 0.22.0.
+
 ## 0.9.6 — 9 August 2026
 
 A stability release.

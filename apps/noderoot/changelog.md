@@ -6,6 +6,19 @@ app: noderoot
 
 What's new in **Node-ROOT**, newest first.
 
+## 1.3.0 — 25 November 2026
+
+### Image moderation
+
+- **New "Image Hash" node**: Fetches an image and produces a fingerprint (SHA-256) of its contents, so workflows can match it against a list of known-bad images.
+- **New "Add to List" action node**: Adds an entry to a named list from within a workflow.
+- **Strike counter**: Record strikes against a member and check whether they have reached a threshold, so a workflow can escalate for repeat offenders.
+- **Ready-made samples**: Importable profile-image moderation workflows, including one that escalates with repeat strikes.
+
+### Platform
+
+- Updated to Root SDK 0.22.0.
+
 ## 1.2.0 — 4 November 2026
 
 ### Ephemeral channels
