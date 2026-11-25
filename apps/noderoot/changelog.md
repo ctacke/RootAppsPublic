@@ -6,6 +6,12 @@ app: noderoot
 
 What's new in **Node-ROOT**, newest first.
 
+## 1.3.2 — 25 November 2026
+
+### Fixes
+
+- **Failed HTTP and bot calls are no longer silent**: When an HTTP or Call Bot node fails and nothing is connected to its **failed** output, the reason now appears in the Errors panel. Connect **failed** to handle it yourself.
+
 ## 1.3.1 — 25 November 2026
 
 ### Errors panel
